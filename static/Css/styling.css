@@ -1,22 +1,226 @@
-*{
+html{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
     font-family: 'Poppins',sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and nav */
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: column; /* Stack list items */
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Add vertical spacing */
+    }
+
+    section {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+    }
 }
 
-/* html{
-    font-size: 67.5%;
-} */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background-color: #4592AF;
+    z-index: 9999;
+}
+
+
 
 body{
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
-    background-color: white;
+    overflow: hidden;
+    background-color:black;
+    color: white;
+}
+
+header {
+    background: linear-gradient(to bottom left, #4592AF,#E3C4A8);
+    color: white;
+    position: relative;
+    font-weight: 700;
+    /*margin-bottom: 10px;*/
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #4592AF;
+    align-items:center;
+    }
+
+.logo{
+    text-decoration: none;
     color: black;
 }
 
+header ul{
+    display: flex;
+    margin: 0;
+    padding:0;
+    list-style: none;
+
+}
+
+header  ul li{
+    display: inline-block;
+    margin-left: 20px;
+
+
+}
+header li a:hover{
+    color:#E3C4A8
+}
+
+/*header li a:hover{*/
+/*    background-color: #E3C4A8;*/
+/*}*/
+header li a{
+    text-decoration: none;
+    /*transition: color 0.3s ease;*/
+    text-transform: capitalize;
+    color: black;
+    z-index:1;
+}
+
+
+footer{
+    position: relative;
+    padding: 20px 50px;
+    width: 100%;
+    min-height: 100px;
+    background: linear-gradient(to bottom right, #33313B,#4592AF);
+    align-items: center;
+
+}
+
+footer li{
+    list-style: none;
+}
+
+footer li a{
+    color: black;
+}
+
+section {
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    padding: 150px 50px;
+}
+
+#My-Name{
+    color: #E3C4A8;
+}
+
+img{
+    max-width: 100%;
+    max-height:100%;
+    border-radius:40px;
+}
+.social-icons a{
+    min-width: 50px;
+    text-decoration: none;
+    margin-right:20px;
+    color: white;
+}
+button a{
+    text-decoration:none;
+    color: white;
+}
+button{
+    margin-top: 20px;
+    padding: 1em 2em;
+    color: white;
+    background: #161a20;
+    border: none;
+    border-radius:1000px;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+button::after{
+    content:'';
+    position: absolute;
+    height:107%;
+    width:102%;
+    border-radius:1000px;
+    background-image: linear-gradient(to bottom right,#4592AF,#E3C4A8);
+    z-index: -1;
+}
+button:hover{
+    z-index:0;
+    box-shadow: 40px 0 100px #4592AF,-10px 0 100px #E3C4A8;
+}
+
+.description-text{
+    width:246px;
+    overflow: hidden;
+
+}
+
+.description-text .text{
+    position: relative;
+    font-size:30px;
+    font-weight: 600;
+    color: #E3C4A8
+}
+
+.description-text .text .first-text{
+    color:#FFF;
+}
+
+.sec-text:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:black;
+    border-left: 2px solid #E3C4A8;
+    animation: animate 7s steps(20) infinite;
+}
+
+@keyframes animate {
+    40%, 80%{
+        left:calc(100% + 4px)
+    }
+    100%{
+        left: 0%
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        height: auto;
+        padding: 30px 20px;
+    }
+}
