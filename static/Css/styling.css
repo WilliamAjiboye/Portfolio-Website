@@ -1,6 +1,7 @@
 html{
     margin: 0;
     padding: 0;
+    overflow: auto;
     font-family: 'Poppins',sans-serif;
     color: white;
     scroll-behavior: smooth;
@@ -43,7 +44,7 @@ body{
     padding: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     background-color:black;
     color: white;
 }
@@ -168,7 +169,8 @@ button:hover{
 }
 
 .description-text{
-    width:246px;
+    width:auto;
+    white-space:nowrap;
     overflow: hidden;
 
 }
@@ -193,7 +195,7 @@ button:hover{
     width:100%;
     background:black;
     border-left: 2px solid #E3C4A8;
-    animation: animate 7s steps(20) infinite;
+    animation: animate 4s steps(20) infinite;
 }
 
 @keyframes animate {
