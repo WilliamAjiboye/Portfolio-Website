@@ -47,6 +47,7 @@ body{
     overflow: auto;
     background-color:black;
     color: white;
+
 }
 
 header {
@@ -63,9 +64,16 @@ header {
     align-items:center;
     }
 
+.first-name{
+    color:#4592AF;
+}
 .logo{
+    font-size: 40px;
+    font-family:"Griffy", system-ui;
+    font-weight: 400;
     text-decoration: none;
     color: black;
+    text-transform: capitalize;
 }
 
 header ul{
@@ -104,15 +112,19 @@ footer{
     width: 100%;
     min-height: 100px;
     background: linear-gradient(to bottom right, #33313B,#4592AF);
+    display:flex;
+    justify-content: center;
     align-items: center;
-
 }
 
+
 footer li{
+    display:inline-block;
     list-style: none;
 }
 
 footer li a{
+    font-size: 30px;
     color: black;
 }
 
@@ -132,6 +144,7 @@ img{
     border-radius:40px;
 }
 .social-icons a{
+    font-size: 30px;
     min-width: 50px;
     text-decoration: none;
     margin-right:20px;
@@ -172,7 +185,6 @@ button:hover{
     width:auto;
     white-space:nowrap;
     overflow: hidden;
-
 }
 
 .description-text .text{
@@ -198,6 +210,12 @@ button:hover{
     animation: animate 4s steps(20) infinite;
 }
 
+.coming-soon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @keyframes animate {
     40%, 80%{
         left:calc(100% + 4px)
@@ -206,6 +224,105 @@ button:hover{
         left: 0%
     }
 }
+
+.glitch-text {
+    position: relative;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glitch-skew 1s infinite linear alternate;
+}
+
+/* Create glitch layers */
+.glitch-text::before,
+.glitch-text::after {
+    content: "COMING SOOOOON!!!"; /* Duplicate the text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0); /* Initially clip the text */
+    animation: glitch-anim 2s infinite linear alternate;
+}
+
+/* Left-offset layer */
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+/* Right-offset layer */
+.glitch-text::after {
+    left: -2px;
+    text-shadow: 2px 0 cyan;
+    animation: glitch-anim 3s infinite linear alternate;
+}
+
+/* Skew animation */
+@keyframes glitch-skew {
+    0% {
+        transform: skew(0deg);
+    }
+    25% {
+        transform: skew(5deg);
+    }
+    50% {
+        transform: skew(-5deg);
+    }
+    75% {
+        transform: skew(2deg);
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+/* Clip and offset animation */
+@keyframes glitch-anim {
+    0% {
+        clip: rect(10px, 900px, 50px, 0);
+    }
+    25% {
+        clip: rect(60px, 900px, 100px, 0);
+    }
+    50% {
+        clip: rect(110px, 900px, 150px, 0);
+    }
+    75% {
+        clip: rect(20px, 900px, 70px, 0);
+    }
+    100% {
+        clip: rect(80px, 900px, 120px, 0);
+    }
+}
+
+
+
+#Contact{
+    /*margin-top:20px;*/
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#contactmeform div{
+    /*border-radius:1000px;*/
+    margin-top: 20px;
+    /*padding: 1em 2em;*/
+    /*color: white;*/
+    /*background: #161a20;*/
+    /*border: none;*/
+}
+
+.submitbutton{
+    margin-top:50px;
+}
+
+
 
 @media (max-width: 768px) {
     header {
