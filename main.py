@@ -25,7 +25,7 @@ my_gmail = os.getenv('my_gmail')
 password = os.getenv('password')
 
 Bootstrap5(app)
-app.config['SECRET_KEY'] = os.getenv('secret-key')
+app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 
 
 @app.route('/', methods=['GET', 'POST'])
